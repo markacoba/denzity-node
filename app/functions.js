@@ -29,7 +29,11 @@ var self = module.exports = {
         let str = ''
         switch (type){
             case 'Property':
+            case 'Project':
                 d = data.name
+                break
+            case 'PropertyValue':
+                d = data.label
                 break
         }
         switch (api){
