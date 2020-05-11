@@ -2,6 +2,7 @@ const util = require('util')
 
 var self = module.exports = {
     formatError: (err) =>{
+        console.log(err)
         let error = {success: false, messages: []}
         if (typeof err === 'string' ){
             error.messages.push(err)
@@ -33,7 +34,11 @@ var self = module.exports = {
                 d = data.name
                 break
             case 'PropertyValue':
+            case 'Filter':
                 d = data.label
+                break
+            case 'Picture':
+                d = data.filename
                 break
         }
         switch (api){

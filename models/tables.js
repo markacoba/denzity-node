@@ -86,6 +86,10 @@ Filter.init({
         allowNull: false,
         defaultValue: 99
     },
+    dynamicOptions: {
+        type: DataTypes.BOOLEAN,         
+        defaultValue: true
+    },
     active: {
         type: DataTypes.BOOLEAN,         
         defaultValue: true
